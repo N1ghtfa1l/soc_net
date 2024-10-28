@@ -97,11 +97,11 @@ const ProfilePage: FC<ProfilePageProps> = ({ renderPlace = "myProfile", nameUser
                                 </div>
                             </div>
                         </div>
-                        <div className='flex flex-col pt-10'>
+                        <div className='flex flex-col pt-10 '>
                             <div>Описание</div>
                             {renderPlace === "userProfile" && <textarea readOnly value={descriptionUserProfile} onChange={(e) => setDescriptionUser(e.target.value)} className='h-[100px] p-[10px] rounded-3xl  resize-none bg-[rgb(42,44,48)]' />}
                             {renderPlace === "myProfile" && <textarea value={userData} onChange={(e) => setUserData(e.target.value)} className='h-[100px] p-[10px] rounded-3xl  resize-none bg-[rgb(42,44,48)]' />}
-                            {renderPlace === "myProfile" && <button onClick={() => updateDesc(localStorage.getItem('id'))}>обновить</button>}
+                            {renderPlace === "myProfile" && <button className='max-w-[100px] bg-slate-600 p-[5px] rounded-lg hover:bg-slate-500 self-center transition-all' onClick={() => updateDesc(localStorage.getItem('id'))}>обновить</button>}
 
                         </div>
                     </div>
